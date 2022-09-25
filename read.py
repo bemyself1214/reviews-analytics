@@ -24,6 +24,25 @@ for d in data: #for loop的意思是[把清單中的東西一個一個拿出來]
 print('一定有', len(new), '比留言長度小於100')
 print(new[0])
 print(new[1])
+
+# good = []
+# for d in data: #for loop的意思是[把清單中的東西一個一個拿出來]
+# 	if 'good' in d:
+# 		good.append(d)
+# print('一共有', len(good), '比留言提到good')
+#==清單快寫法
+good = [1 for d in data if 'good' in d]
+       #^把1的裝進good
+print(good)
+
+bad = ['bad' in d for d in data]
+print(bad)
+
+#不是快寫法的bad
+# bad = []
+# for d in data:
+# 	bad.append('bad' in d)
+
 #print(data[0]) #印出第一筆
 #cls cmd畫面清掉
 
