@@ -16,6 +16,14 @@ for d in data:
 
 avg_len = sum_len / len(data)
 print('留言平均長度為', avg_len)
+
+new = []
+for d in data: #for loop的意思是[把清單中的東西一個一個拿出來]
+	if len(d) < 100:
+		new.append(d)
+print('一定有', len(new), '比留言長度小於100')
+print(new[0])
+print(new[1])
 #print(data[0]) #印出第一筆
 #cls cmd畫面清掉
 
